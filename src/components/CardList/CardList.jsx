@@ -1,10 +1,20 @@
 import React from "react";
 import Card from "../Card/Card";
-import "./CardList.css";
+import styled from "styled-components";
+
+// Стилізація списку карток
+const CardListWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1250px;
+  margin: 0 auto;
+`;
 
 const CardList = ({ cards }) => {
   return (
-    <div className="card-list">
+    <CardListWrapper>
       {cards.map((card) => (
         <Card
           key={card.id}
@@ -13,7 +23,7 @@ const CardList = ({ cards }) => {
           image={card.image}
         />
       ))}
-    </div>
+    </CardListWrapper>
   );
 };
 

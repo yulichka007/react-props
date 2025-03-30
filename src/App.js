@@ -1,5 +1,6 @@
 import React from "react";
 import CardList from "./components/CardList/CardList";
+import ProfileCard from "./components/ProfileCard"; // Імпорт ProfileCard
 
 const cardsData = [
   {
@@ -36,8 +37,9 @@ const cardsData = [
 
 const App = () => {
   return (
-    <div>
-      <h1 style={{ textAlign: "center" }}>Галерея карток</h1>
+    <div style={{ textAlign: "center", padding: "20px" }}>
+      <ProfileCard /> {/* Картка профілю вгорі */}
+      <h1>Галерея карток</h1>
       <CardList cards={cardsData} />
     </div>
   );
