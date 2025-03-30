@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../Card/Card";
 import styled from "styled-components";
 
-// Стилізація списку карток
+
 const CardListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;

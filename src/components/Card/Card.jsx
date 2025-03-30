@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-// Стилізація через styled-components
+
 const CardWrapper = styled.div`
   width: 100%;
   max-width: 320px;

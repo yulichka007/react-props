@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-// Стилізовані компоненти
 const CardContainer = styled.div`
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -30,12 +29,10 @@ const FollowButton = styled.button`
 `;
 
 const ProfileCard = () => {
-  // Стан для кнопки "Follow"
   const [isFollowed, setIsFollowed] = useState(false);
 
-  // Обробник події натискання на кнопку
   const handleFollowClick = () => {
-    setIsFollowed(!isFollowed); // Перемикає стан підписки
+    setIsFollowed(!isFollowed); 
   };
 
   return (
@@ -43,10 +40,8 @@ const ProfileCard = () => {
       <ProfileImage src="/юля.jpg" alt="Profile" />
       <h2>Yulia Motrich</h2>
       <p style={{ color: "gray" }}>Student</p>
-
-      {/* Кнопка, яка змінюється в залежності від стану */}
       <FollowButton onClick={handleFollowClick} isFollowed={isFollowed}>
-        {isFollowed ? "Following" : "Follow"} {/* Текст кнопки змінюється */}
+        {isFollowed ? "Following" : "Follow"}
       </FollowButton>
     </CardContainer>
   );
